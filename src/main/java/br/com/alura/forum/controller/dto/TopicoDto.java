@@ -7,17 +7,17 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class TopicoDto {
+
     private Long id;
     private String titulo;
-    private String  mensagem;
+    private String mensagem;
     private LocalDateTime dataCriacao;
 
-    public TopicoDto(Topico topico){
+    public TopicoDto(Topico topico) {
         this.id = topico.getId();
         this.titulo = topico.getTitulo();
         this.mensagem = topico.getMensagem();
         this.dataCriacao = topico.getDataCriacao();
-
     }
 
     public static List<TopicoDto> converter(List<Topico> topicos) {
